@@ -24,7 +24,7 @@ test('makes table row', assert => {
 
     assert.htmlEqual(dom, /*html*/`
         <tr>
-            <td>true</td>
+            <td>Yes</td>
             <td>$2,559.99</td>
             <td class="center">
                 <img src="http://placehold.it/32x32">

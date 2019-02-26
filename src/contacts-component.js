@@ -1,7 +1,7 @@
 export function makeContactRow(contact) {
     const html = /*html*/`
         <tr>
-            <td>${contact.isActive}</td>
+            <td>${contact.isActive ? 'Yes' : 'No'}</td>
             <td>$${contact.balance.toLocaleString()}</td>
             <td class="center">
                 <img src="${contact.picture}">
@@ -19,4 +19,13 @@ export function makeContactRow(contact) {
     const template = document.createElement('template');
     template.innerHTML = html;
     return template.content;
+}
+
+const contactsList = document.getElementById('contacts-list');
+
+export default function loadContacts(contacts) {
+    contacts.forEach(contact => {
+        const dom = makeContactRow(contact);
+        contactsList.appendChild(dom);
+    });
 }
