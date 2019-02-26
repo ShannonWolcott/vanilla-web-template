@@ -1,5 +1,2 @@
-const test = QUnit.test;
-
-test('write a test', function(assert) {
-    assert.equal(true, false);
-});
+import './html-equal.js';
+import './contacts-component.test.js';
