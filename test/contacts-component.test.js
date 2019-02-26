@@ -11,7 +11,6 @@ test('makes table row', assert => {
         balance: 2559.99,
         picture: 'http://placehold.it/32x32',
         age: 28,
-        eyeColor: 'blue',
         firstName: 'Cantu',
         lastName: 'Sullivan',
         company: 'IDETICA',
