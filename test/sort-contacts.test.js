@@ -1,6 +1,6 @@
 const test = QUnit.test;
 
-function sort(contacts, sortField, direction) {
+function sortContacts(contacts, sortField, direction) {
     direction = direction || 1;
 
     return contacts.sort((a, b) => {
@@ -23,7 +23,7 @@ const contacts = [
 test('sort by firstName', assert => {
     //arrange (contacts)
     //act
-    const sorted = sort(contacts, 'firstName');
+    const sorted = sortContacts(contacts, 'firstName');
     //assert
     assert.deepEqual(sorted, [
         { firstName: 'Albert', age: 16 },
@@ -35,7 +35,7 @@ test('sort by firstName', assert => {
 test('sort by age', assert => {
     //arrange (contacts)
     //act
-    const sorted = sort(contacts, 'age');
+    const sorted = sortContacts(contacts, 'age');
     //assert
     assert.deepEqual(sorted, [
         { firstName: 'Bert', age: 12 },
@@ -47,7 +47,7 @@ test('sort by age', assert => {
 test('sort by firstName descending', assert => {
     //arrange (contacts)
     //act
-    const sorted = sort(contacts, 'firstName', -1);
+    const sorted = sortContacts(contacts, 'firstName', -1);
     //assert
     assert.deepEqual(sorted, [
         { firstName: 'Zena', age: 14 },
