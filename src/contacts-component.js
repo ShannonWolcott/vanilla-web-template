@@ -24,12 +24,16 @@ export function makeContactRow(contact) {
 const contactsList = document.getElementById('contacts-list');
 
 export default function loadContacts(contacts) {
-    while(contactsList.children.length > 0) {
-        contactsList.lastElementChild.remove();
-    }
+    clearRows();
 
     contacts.forEach(contact => {
         const dom = makeContactRow(contact);
         contactsList.appendChild(dom);
     });
 }
+function clearRows() {
+    while(contactsList.children.length > 0) {
+        contactsList.lastElementChild.remove();
+    }
+}
+
