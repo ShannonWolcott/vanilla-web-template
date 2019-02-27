@@ -24,6 +24,10 @@ export function makeContactRow(contact) {
 const contactsList = document.getElementById('contacts-list');
 
 export default function loadContacts(contacts) {
+    while(contactsList.children.length > 0) {
+        contactsList.lastElementChild.remove();
+    }
+
     contacts.forEach(contact => {
         const dom = makeContactRow(contact);
         contactsList.appendChild(dom);
