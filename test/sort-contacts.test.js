@@ -1,6 +1,8 @@
 import sortContacts from '../src/sort-contacts.js';
 const test = QUnit.test;
 
+QUnit.module('sort contacts');
+
 const contacts = [
     { firstName: 'Bert', age: 12 },
     { firstName: 'Albert', age: 16 },
